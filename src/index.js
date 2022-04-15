@@ -42,6 +42,9 @@ var txBarData = [];
 var rxBarData = [];
 var rawRxJson = [];
 var rawTxJson = [];
+const weekday = ['Sun','Mon', 'Tue','Wed','Thur','Fri','Sat']
+const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
 /* URL Constructor */
 function buildTarget(target,time) {
 	fullTimeandFormat = "from="+time+"&"+until+"&format=json";
@@ -222,12 +225,11 @@ document.getElementById('time-selector').onchange = function () {
 		newSelection();
 	}
 };
+
 /*functions &eval*/
-const weekday = ['Sun','Mon', 'Tue','Wed','Thur','Fri','Sat']
-const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
 //time since epoch to human readable
 function epochToTime(e){
-			
 	var i = parseInt(e)*1000;
 	var date = new Date(i);
 	var minutes = date.getMinutes();
@@ -250,7 +252,7 @@ function epochToTime(e){
 	return nDate;
 }
 
-//mock xhr json parse and replace 
+//thought it was XHR, but fetch was needed. 
 function mockXHRjson(){
 	fetch(fullTargetUrl.toString())
 		.then(response=>{
@@ -264,7 +266,7 @@ function mockXHRjson(){
 			parseJsonData(rawData);
 		})
 }
-
+//render bar pie and main line charts
 function barChartRender(){
 	barChart.data.datasets[0].data=txBarData;
 	barChart.data.datasets[1].data=rxBarData;
@@ -295,9 +297,6 @@ function mainChartRender(){
 	myChart.update();	
 }
 //fill datapoints and timestamps into arrays
-//
-//
-
 function parseJsonData(json){
 	var b = 0;
 	mainData = [];
@@ -339,34 +338,6 @@ function parseTxJson(json){
 	};
 
 }
-
-/*
-window.onload = function initialSetup(){
-buildTarget(currentTarget,timePeriod);
-	fetch(startingURL)
-		.then(response=>{
-			if(response.ok) {
-				return response.json();
-			}
-			throw new Error('errd');
-		})
-		.then((responseJson) => {
-			rawData = responseJson;
-			parseJsonData(rawData);
-			//update chart label
-			myChart.data.label=mainTime;
-			//update chart data
-			myChart.data.datasets[0].data=mainData;
-			//push update
-			createChart(rawData);
-			myChart.update();	
-
-		})
-
-}
-
-*/
-
 document.getElementById('manualStart').onclick = function(){
 	updateChart();
 }
@@ -429,10 +400,6 @@ window.onload = function initialSetup(){
 		})
 	updateChart();
 
-//
-	//jsonGetter(txURL);
-	//jsonGetter(rxURL);
-	//jsonGetter(startingURL);
 }
 /* chart rebuilder */
 function updateChart(){
@@ -471,20 +438,6 @@ function prepareBarPie2(json){
 function jsonGetter(url){
 	
 }
-//fill array with vals from json
-/*
-for (var key in mainData){
-	dataPoints = [];
-	timeStamps = [];
-	var item = mainData[0].datapoints;
-	for( let i=0;i<item.length;i++){
-		if(i%2==0){
-		dataPoints.push(item[i][0]);
-		timeStamps.push(epochToTime(item[i][1]));
-		}
-	}
-}
-*/
 //fill rxBarData
 function setupRxBar(json){
 		rxBarTime = [];
