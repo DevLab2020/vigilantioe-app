@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "build": "webpack --config webpack.config.js",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack --mode production --env production"
   },
   "keywords": [],
   "author": "",
