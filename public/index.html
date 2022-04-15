@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		    <title>VigilantIOE</title>
+		<style>
+		body{
+			background: rgb(88,124,64);
+			background: linear-gradient(0deg, rgba(88,124,64,1) 0%, rgba(133,144,94,1) 100%);
+			width:100vw;
+			height:100vh;
+			overflow-x:hidden;
+			padding:0px;
+			margin:0px;
+		}
+		.header{
+			font-family:'Open Sans';
+			text-align:center;
+			background:rgba(255,255,255,.5);
+			width:100%;
+			height:100px;
+			margin:0px;padding:0px;
+			
+		}
+		.largecontain{
+			text-align:center;
+			width:100%;
+		}
+		.main{
+			background:white;
+			width:100%;
+			height:300px;
+			text-align:center;
+			margin-top:10px;
+			padding-top:10px;
+		}
+		.main-graph-contain{
+			text-align:center;
+			width:400px;
+			background:rgba(40,125,40,.1);
+			padding:0px;
+		}
+		.container{
+			text-align:center;
+			background:white;
+			border-radius:10px;
+			width:350px;
+			margin-top:10px;
+			padding:10px;
+		}
+		.footer{
+			font-family:'Open Sans', sans-serif;
+			background:white;
+			height:30px;
+			width:100%;
+			position:absolute;
+			padding:0px;margin:0px;
+			bottom:0;
+			text-align:center;
+		}
+		h1, h2, h3, h4, h5, h6{
+			display:inline;
+			font-family:'Open Sans';
+		}
+		.buttonDiv{
+			width 330px;
+			display:inline-block;
+			margin-right:10px;
+			padding-top:2px;
+		}
+		.button{
+			cursor:pointer;
+			width:100px;
+			height:20px;
+			background:rgba(255,255,255,1);
+			border:1px solid black;
+			border-radius:5px;
+			font-family:'Open Sans';
+			font-size:12px;
+			margin-right:7px;
+			display:inline-block;
+		}
+		</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+	</head>
+<body>
+	<div class="header">
+		<h1> VigilantIOE Exercise</h1>
+		<br>
+		<h4>Graphite JSON to graph.js</h4>
+		<br>
+		<div class="buttonDiv">
+			<div id="manualStart" class="button">
+				LOAD / REFRESH
+			</div>
+		</div>
+	</div>
+	<div class="largecontain">
+			<div class="buttonDiv">
+				<label for="refresh-select"><h5 style="color:white;">Auto Refresher</h5></label>
+					<select name="choice" id="refresh-selector">
+						<option value="off" selected>off</option>
+						<option value="5m">5 Minutes</option>
+						<option value="30m">30 Minutes</option>
+						<option value="60m">60 Minutes</option>
+					</select>
+			</div>
+		<br>
+			<div class='main'>
+				<div id="mainChartTitle">
+					<h3 id="setTargettoTitle">1 Hour</h3>
+				</div>
+
+				<span><h4 id="mainGraphTitle">Data Transmit</h4></span>
+				<br>
+				<center>
+					<div class="main-graph-contain">
+						<canvas id="myChart"></canvas>
+					</div>
+				</center>
+			<div class="buttonDiv">
+				<label for="time-select"><h5>Time Range:</h5></label>
+				<br>
+				<select name="times" id="time-selector">
+					<option value="1h" selected>1 Hour</option>
+					<option value="1w">1 Week</option>
+					<option value="1m">1 Month</option>
+				</select>
+			</div>
+			<div class="buttonDiv">
+				<label for="target-select"><h5>Target:</h5></label>
+				<br>
+
+				<select name="targets" id="target-selector">
+					<option value="PL">Packet Loss</option>
+					<option value="RTA">Round Trip Average</option>
+					<option value="IDLE">CPU idle</option>
+					<option value="IOWAIT">CPU iowait</option>
+					<option value="STEAL">CPU steal</option>
+					<option value="SYSTEM">CPU system</option>
+					<option value="USER">CPU user</option>
+					<option value="DISK">DISK Performance</option>
+					<option value="ACTIVE">MEMORY (Active)</option>
+					<option value="CACHED">MEMORY (Cached)</option>
+					<option value="USED">MEMORY (Used)</option>
+					<option value="SWAPCACHE">SWAP (Cached)</option>
+					<option value="SWAPUSED">SWAP (Used)</option>
+					<option value="RX">RX Data Received</option>
+					<option value="RXerr">Rx Errors</option>
+					<option value="TX" selected>TX Data Transmitted</option>
+					<option value="TXerr">Tx Errors </option>
+				</select>
+			</div>
+			<br>
+		</div>
+		<center>
+			<div class='container'>
+				<div id="barChartTitle">
+					<h5>	1 Hour Rx/Tx Bar Chart Comparison</h5>
+				</div>
+				<br>
+				<canvas id="barChartCanvas"></canvas>
+			</div>
+			<div class="container">
+				<div id="barChartTitle">
+					<h5>	1 Hour Rx/Tx Pie Chart Comparison</h5>
+				</div>
+				<br>
+
+				<div style="display:inline-block;width:170px;">
+					<canvas id="pieChartCanvas"></canvas>
+				</div>
+				<div style="display:inline-block;width:170px;">
+					<canvas id="pieChartCanvas2"></canvas>
+				</div>
+				<br>
+				<div style="display:inline-block;width:170px;">
+					<h5> Total Rx / Tx </h5>
+
+				</div>
+				<div style="display:inline-block;width:170px;">
+					<h5> Average Rx / Tx </h5>
+				</div>
+			</div>
+			
+		</center>
+</div>
+<div class="footer">
+	<h6>Created By:</h6><h5> Jay Patoka</h5><h6> with Chart.js (and an attempt at Mithril)</h6>
+</div>
+	<script src="/main.js"></script>
+</body>
+</html>
+
