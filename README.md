@@ -44,9 +44,9 @@
 
 # README:
 ##### TESTED ON:
-###### ArchLinux / Red Hat Enterprise Linux
+###### ArchLinux / Red Hat Enterprise Linux / Ubuntu
 #### REQUIREMENTS:
-###### npm, git
+###### npm (node.js), git
 
 ## Step1
 
