@@ -44,7 +44,7 @@
 
 # README:
 #### REQUIREMENTS:
-###### npm
+###### npm, git
 
 ## Step1
 
