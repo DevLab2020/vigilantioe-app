@@ -44,7 +44,7 @@
 
 # README:
 
-## Steps
+## Installation
 
 ### Step1
 
