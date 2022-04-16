@@ -15,19 +15,19 @@
 
 	c. One line and pie chart is the minimum , not maximum. Add as many charts and other types of charts you want! 
 
-	     - A heavy focus of VigilantIoE is connecting people processes (IoE) with device data (IoT). We’re predominantly in the telecom space currently and have a large focus on how we visualize data to users and how they can interact with it. 
+	  - A heavy focus of VigilantIoE is connecting people processes (IoE) with device data (IoT). We’re predominantly in the telecom space currently and have a large focus on how we visualize data to users and how they can interact with it. 
 
 	d. One selector to change targets in one chart. 
 
 	e. Auto-refreshing options 
 
-	     - Controlled by a drop-down menu with the options of 5 minutes, 30 minutes, and 1 hour. 
+	  - Controlled by a drop-down menu with the options of 5 minutes, 30 minutes, and 1 hour. 
 
-	     - Only the data in the panel should refresh. 
+	  - Only the data in the panel should refresh. 
 
 	f. Time period selector 
 
-	     - Controlled by a drop down menu that pulls data from the following presets: 
+	  - Controlled by a drop down menu that pulls data from the following presets: 
 
 1. Last hour 
 
