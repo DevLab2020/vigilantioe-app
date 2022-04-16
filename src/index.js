@@ -210,18 +210,21 @@ document.getElementById('time-selector').onchange = function () {
 		timePeriod="-720h";
 		until = "until=-24h";
 		buildTarget(currentTarget,timePeriod);
+		updateChart();
 		newSelection();
 	}else if(e == "1w"){//if 1week -168h until now
 		targettoTitle.innerHTML = "1 Week";
 		timePeriod="-168h";
 		until="until=now";
 		buildTarget(currentTarget,timePeriod);
+		updateChart();
 		newSelection();
 	}else if(e == "1h"){//if 1hour -1h until now
 		targettoTitle.innerHTML = "1 Hour";
 		timePeriod="-1h";
 		until="until=now";
 		buildTarget(currentTarget,timePeriod);
+		updateChart();
 		newSelection();
 	}
 };
