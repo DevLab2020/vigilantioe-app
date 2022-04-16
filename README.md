@@ -44,10 +44,27 @@
 
 # README:
 
+## Steps
+
+### Step1
+
+###### Create Directory
+
+	>mkdir projectName
+
+###### Move into new directory 
+
+	>cd projectName
+
+###### clone github repo
+
+	>git clone https://www.github.com/DevLab2020/vigilantioe-app
+
+###### move to new directory
+
+	>cd vigilantioe-app
+
+######  next step..
+
+	
 ### ..currently building..
-
-
-# Steps
-
-## Step1
-
