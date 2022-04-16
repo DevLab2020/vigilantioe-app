@@ -207,8 +207,8 @@ document.getElementById('time-selector').onchange = function () {
 	let e = document.getElementById("time-selector").value;
 	if(e == "1m"){//if 1month -720 hours, change until to yesterday
 		targettoTitle.innerHTML = "1 Month";
-		timePeriod="-30d";
-		until = "until=-1d";
+		timePeriod="-720h";
+		until = "until=-24h";
 		buildTarget(currentTarget,timePeriod);
 		newSelection();
 	}else if(e == "1w"){//if 1week -168h until now
