@@ -43,6 +43,8 @@
 
 
 # README:
+##### TESTED ON:
+###### ArchLinux / Red Hat Enterprise Linux
 #### REQUIREMENTS:
 ###### npm, git
 
