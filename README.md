@@ -44,9 +44,9 @@
 
 # README:
 
-## Installation
+## Step1
 
-### Step1
+### Installation
 
 ###### Create Directory
 
