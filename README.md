@@ -9,35 +9,35 @@
 
 2. The web page should include: 
 
-	a. One line graph 
+a. One line graph 
 
-	b. One Pie Chart. 
+b. One Pie Chart. 
 
-	c. One line and pie chart is the minimum , not maximum. Add as many charts and other types of charts you want! 
+c. One line and pie chart is the minimum , not maximum. Add as many charts and other types of charts you want! 
 
-		i. A heavy focus of VigilantIoE is connecting people processes (IoE) with device data (IoT). We’re predominantly in the telecom space currently and have a large focus on how we visualize data to users and how they can interact with it. 
+i. A heavy focus of VigilantIoE is connecting people processes (IoE) with device data (IoT). We’re predominantly in the telecom space currently and have a large focus on how we visualize data to users and how they can interact with it. 
 
-	d. One selector to change targets in one chart. 
+d. One selector to change targets in one chart. 
 
-	e. Auto-refreshing options 
+e. Auto-refreshing options 
 
-		i. Controlled by a drop-down menu with the options of 5 minutes, 30 minutes, and 1 hour. 
+i. Controlled by a drop-down menu with the options of 5 minutes, 30 minutes, and 1 hour. 
 
-		ii. Only the data in the panel should refresh. 
+ii. Only the data in the panel should refresh. 
 
-	f. Time period selector 
+f. Time period selector 
 
-		i. Controlled by a drop down menu that pulls data from the following presets: 
+i. Controlled by a drop down menu that pulls data from the following presets: 
 
-			1. Last hour 
+1. Last hour 
 
-			2. Last 7 days 
+2. Last 7 days 
 
-			3. 30 Days until yesterday 
+3. 30 Days until yesterday 
 
 3. Store your code on a public Git repository (GitHub, Bitbucket, GitLab, etc) . 
 
-	a. Deploy your application to a cloud platform such as Heroku 
+a. Deploy your application to a cloud platform such as Heroku 
 
 4. Create a ‘readme’ file with instructions on how to run your application locally.
 
@@ -52,11 +52,11 @@
 
 ###### Create Directory
 
-``` mkdir projectName ```
+	mkdir projectName
 
 ###### Move into new directory 
 
-``` cd projectName ```
+	cd projectName
 
 ###### clone github repo
 
