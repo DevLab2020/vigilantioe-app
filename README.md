@@ -52,24 +52,24 @@
 
 ###### Create Directory
 
-	>mkdir projectName
+	> mkdir projectName
 
 ###### Move into new directory 
 
-	>cd projectName
+	> cd projectName
 
 ###### clone github repo
 
-	>git clone https://www.github.com/DevLab2020/vigilantioe-app
+	> git clone https://www.github.com/DevLab2020/vigilantioe-app
 
 ###### move to new directory
 
-	>cd vigilantioe-app
+	> cd vigilantioe-app
 
 ###### Run Application
 
-	>npm run start	
+	> npm run start	
 
 ###### Open browser and visit this url:
 
-	>http://localhost:3000
+	> http://localhost:3000
