@@ -21,13 +21,13 @@
 
 	e. Auto-refreshing options 
 
-		i. This should be controlled by a drop-down menu with the options of 5 minutes, 30 minutes, and 1 hour. 
+		i. Controlled by a drop-down menu with the options of 5 minutes, 30 minutes, and 1 hour. 
 
 		ii. Only the data in the panel should refresh. 
 
 	f. Time period selector 
 
-		i. This should also be controlled by a drop down menu that pulls data from the following presets: 
+		i. Controlled by a drop down menu that pulls data from the following presets: 
 
 			1. Last hour 
 
