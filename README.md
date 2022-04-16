@@ -43,6 +43,8 @@
 
 
 # README:
+#### REQUIREMENTS:
+###### npm
 
 ## Step1
 
@@ -64,7 +66,10 @@
 
 	>cd vigilantioe-app
 
-######  next step..
+###### Run Application
 
-	
-### ..currently building..
+	>npm run start	
+
+###### Open browser and visit this url:
+
+	>http://localhost:3000
